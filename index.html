@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="project4script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    
+</head>
+<style>
+    
+    
+    #sec1 {
+
+        min-height: 100vh;
+    }
+
+    #sec2 {
+
+        min-height: auto;
+        background-color: rgb(0, 0, 0);
+        padding-top: 6vw;
+        padding-bottom: 7vw;
+    }
+
+    #sec3 {
+        background-color: rgb(10, 10, 10);
+        min-height: auto;
+        padding-bottom: 6vw;
+        padding-top: 7vw;
+    }
+
+
+    #sec6 {
+        background-color: rgb(0, 0, 0);
+        min-height: auto;
+        padding-top: 6vw;
+        padding-bottom: 9vw;
+    }
+
+    #sec5 {
+        background-color:  rgb(10, 10, 10);
+        min-height: auto;
+        padding-top: 2vw;
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    #navigation nav {
+        background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+    }
+
+    #navigation  label.glow {
+  font-size: 70px;
+  color: #fff;
+  font-size: 35px;
+        line-height: 50px;
+        padding-left: 50px;
+        font-weight: bold;
+        font-family: 'Aclonica', sans-serif;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 40px #e60073, 0 0 40px #e60073, 0 0 40px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+
+
+    #navigation label.logo1:hover {
+        color: rgb(32, 110, 228);
+    }
+
+    #navigation label.logo2 {
+        display: none;
+    }
+
+    #navigation .hidd {
+        display: none;
+    }
+
+    #navigation nav ul {
+        float: right;
+        margin-right: 20px;
+    }
+
+    #navigation nav ul li {
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 5px;
+    }
+
+    #navigation nav ul li a {
+        color: rgb(255, 254, 254);
+        font-size: 16px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        font-family: 'Monoton', cursive;
+    }
+
+    #navigation .span {
+        color: rgb(45, 147, 255);
+    }
+
+    #navigation a.active,
+    .ho:hover {
+        background: linear-gradient(to top right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+        transition: .5s;
+    }
+
+    #navigation .checkbtn {
+        font-size: 20px;
+        color: whitesmoke;
+        float: right;
+        line-height: 50px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #navigation #check {
+        display: none;
+    }
+
+    @media (max-width:952px) {
+        #navigation label.glow {
+            font-size: 30px;
+            padding-left: 50px;
+            color: rgb(255, 255, 255);
+            font-family: 'Aclonica', sans-serif;
+           }
+
+        #navigation nav ul li a {
+            font-size: 14px;
+            color: rgb(243, 242, 242);
+        }
+    }
+
+    @media (max-width:877px) {
+        #navigation .checkbtn {
+            display: block;
+        }
+
+        #navigation ul {
+            position: fixed;
+            width: 350px;
+            height: 100vh;
+            background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+            top: 50px;
+            left: -110%;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        #navigation nav ul li {
+            display: block;
+            margin: 50px 0px -6px;
+            line-height: 30px;
+        }
+
+        #navigation nav ul li a {
+            font-size: 20px;
+            color: white;
+        }
+
+        #navigation .ho:hover,
+        a.active {
+            background: linear-gradient(to top right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+        transition: .5s;
+        }
+
+        #navigation #check:checked~ul {
+            left: 0px;
+        }
+    }
+
+    @media (max-width:430px) {
+        #navigation .glow {
+            display: none;
+        }
+
+        #navigation label.logo2 {
+            display: block;
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            line-height: 50px;
+            padding-left: 50px;
+            font-weight: bold;
+            font-family: 'Aclonica', sans-serif;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+        }
+
+        #navigation .hidd {
+            display: block;
+            color: rgb(255, 254, 254);
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Aclonica', sans-serif;
+
+        }
+
+        #navigation nav ul li {
+            display: block;
+            margin: 32px 0px -6px;
+            line-height: 30px;
+        }
+    }
+
+    @media (max-width:430px) {
+        #navigation ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+            top: 50px;
+            left: -110%;
+            text-align: center;
+            transition: 0.5s;
+        }
+    }
+
+    @media (max-width:305px) {
+        #navigation .hidd {
+            font-size: 24px;
+        }
+    }
+
+    /* section of navuigation bar ends here */
+
+    /* --------------------------------------------------------- */
+
+    /* section of parallex is started here */
+
+
+    .parallax {
+        
+        /* The image used */
+        background-image: url("event_2x.jpg");
+
+        /* Set a specific height */
+        min-height: auto;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #sec1 .set {
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        padding-top: 45vh;
+        color: white;
+        font-family: 'Monoton', cursive;
+
+    }
+
+    #sec1 .txt-rotate {
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+    }
+
+
+    #sec1 .mid1 {
+        font-weight: bold;
+        margin: 0em 0;
+        font-size: 3em;
+        font-family: 'Monoton', cursive;
+    }
+
+    #sec1 .mid2 {
+        color:whitesmoke;
+        font-size: 1.8em;
+        font-family: 'Monoton', cursive;
+    }
+
+    @media (max-width:941px) {
+
+        #sec1 .mid1 {
+            font-weight: bold;
+            margin: 0em 0;
+            font-size: 3.5em;
+        }
+
+        #sec1 .mid2 {
+            color: whitesmoke;
+            font-size: 1.2em;
+        }
+
+
+    }
+    @media (max-width:663px) {
+
+#sec1 .mid1 {
+    font-weight: bold;
+    margin: 0em 0;
+    font-size: 2.5em;
+}
+
+#sec1 .mid2 {
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+
+}
+
+    @media (max-width:468px) {
+
+        #sec1 .mid1 {
+            font-weight: bold;
+            margin: 0.2em 0;
+            font-size: 2em;
+        }
+
+        #sec1 .mid2 {
+            color: whitesmoke;
+            font-size: .8em;
+        }
+    }
+
+    /* our services section starts here */
+
+    #services .container {
+        width: 80%;
+        margin: 0vw auto;
+        background-color: transparent;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    #services .icon {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #services .fa {
+        padding-right: 10px;
+        display: inline;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+    }
+
+    #services h1 {
+        display: inline;
+        font-size: 25px;
+
+    }
+
+    #services .line {
+
+        border: 2px rgb(255, 255, 255) solid;
+        width: 50px;
+        margin: auto;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    #services .heading {
+
+      
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 4vw;
+
+    }
+
+    #services .heading h1 {
+        font-size: 35px;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        font-family: 'Monoton', cursive;
+    }
+
+    #services .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+
+    #services .card {
+        font-size: 12px;
+        background: none;
+        cursor: pointer;
+        z-index: 1;
+        color: whitesmoke;
+        width: 30%;
+        /* background: linear-gradient( to left, #ebebeb 50%,     red    50% ); */
+        position: sticky;
+        margin-bottom: 43px;
+        box-shadow: -4px -4px 3px #0cb2ff, -4px -4px 0px #a826ff, -3px -3px 0px  rgba(40, 54, 255, 0.952);
+        /* background-size: 200% 100%;
+        box-shadow: 0px 0px 10px #39FF14, 0px 0px 10px ;
+    background-position: right bottom;*/
+        transition: all ease .3s;
+
+    }
+
+    #services .card::after {
+        box-shadow: 4px 4px 9px #0cb2ff, 2px 2px 2px #a826ff, 2px 2px 2px  rgba(40, 54, 255, 0.952);
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        height: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #services .card:hover {
+        color: whitesmoke;
+    }
+
+    #services .btn-1:hover:after {
+        height: 100%;
+
+    }
+
+    #services .classheader {
+        text-align: center;
+        padding: 12px 10px;
+
+    }
+
+    #services .cardbody {
+        padding: 10px 20px;
+        text-align: justify;
+        font-size: 15px;
+        color:rgb(172, 171, 171);
+        
+    }
+
+    #services .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 4px 0px rgba(31, 30, 30, 0.692);
+
+    }
+
+    /* responsive media quary */
+    @media screen and (max-width:1259px) {
+        #services .card {
+            width: 45%;
+        }
+    }
+
+    @media screen and (max-width:839px) {
+        #services .container {
+            width: 100%;
+        }
+
+        #services .heading {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        #services .card {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width:427px) {
+        #services .card {
+            font-size: 13px;
+        }
+
+        #services .cardbody {
+            padding: 10px 20px;
+            text-align: justify;
+            font-size: 17px;
+            color: rgb(139, 139, 139);
+        }
+    }
+
+    @media screen and (max-width:385px) {
+        #services h1 {
+            display: block;
+        }
+    }
+
+    /* our service section ends there */
+
+    /* our service section ends there */
+
+    #aboutus {
+        background-color: rgb(10, 10, 10);
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+           }
+
+    #aboutus .heading {
+        font-size: 40px;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        font-family: 'Monoton', cursive;
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        padding: 30px;
+
+    }
+
+    #aboutus .container {
+        width: 80%;
+        margin: auto;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    #aboutus .matter {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 70px;
+
+
+    }
+
+    #aboutus .content {
+
+        color: rgb(172, 171, 171);
+        font-weight: 100;
+        width: 50%;
+        padding: 20px 30px 30px 30px;
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    #aboutus .sli {
+
+        width: 50%;
+        align-items: center;
+        margin: auto;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #aboutus li {
+        list-style: none;
+    }
+
+    #aboutus.icon1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ic {
+        padding-right: 0px;
+        display: inline;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+    }
+
+    #aboutus .lol {
+        padding: 0px;
+    }
+
+    #aboutus .po {
+        padding-right: 20px;
+        padding-top: 28px;
+    }
+
+    #aboutus hr {
+
+        border: 2px whitesmoke solid;
+        width: 50px;
+        margin: auto;
+        justify-content: center;
+        background-color: whitesmoke;
+    }
+
+    #aboutus .slideshow-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #aboutus .image-container {
+        display: block;
+        overflow: hidden;
+    }
+
+    #aboutus .image-container .image {
+        width: 100%;
+        max-height: 700px;
+        margin: 0px;
+    }
+
+    #aboutus .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        margin-top: 0px;
+        color:rgb(71, 56, 209);
+        font-weight: bold;
+        font-size: 30px;
+        border-radius: 0px 3px 3px 0px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #aboutus .next {
+        right: 0px;
+        border-radius: 3px 0px 0px 3px;
+    }
+
+    #aboutus .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.37);
+    }
+
+    #aboutus .dot-container {
+        text-align: center;
+    }
+
+    #aboutus .dot {
+        position: inherit;
+        top: -40px;
+        height: 8px;
+        width: 36px;
+        background-color: #bbb;
+        border-radius: 0px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        transition: all .5s;
+    }
+
+    #aboutus .active,
+    .dot:hover {
+     background-color: rgb(71, 56, 209);
+    }
+
+    #aboutus .fade {
+        animation: fade .3s ease-in-out;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media only screen and (max-width:1495px) {
+        #aboutus .po {
+            padding-right: 20px;
+            padding-top: 8px;
+        }
+
+
+
+    }
+
+    @media only screen and (max-width:1345px) {
+        #aboutus .po {
+
+            padding-top: 4px;
+        }
+
+        #aboutus .content {
+
+            width: 50%;
+            padding-right: 2vw;
+            font-size: 17px;
+            text-align: justify;
+
+        }
+    }
+
+    @media only screen and (max-width:1275px) {
+        #aboutus .po {
+            padding-top: 10px;
+        }
+
+        #aboutus .content {
+
+            width: 50%;
+            padding: 0px;
+            padding-right: 10px;
+            font-size: 17px;
+            text-align: justify;
+            padding-top: 20px;
+        }
+    }
+
+    @media only screen and (max-width:1079px) {
+        #aboutus .matter {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-bottom: 50px;
+        }
+
+        #aboutus .content {
+            width: 79%;
+            margin: auto;
+            justify-self: center;
+            align-self: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 0px;
+        }
+
+        #aboutus .sli {
+            padding: 0px;
+            width: 80%;
+        }
+
+        #aboutus .po {
+            padding-right: 0px;
+            padding-top: 20px;
+
+        }
+
+    }
+
+    @media only screen and (max-width:700px) {
+        #aboutus .dot {
+            height: 8px;
+            width: 36px;
+        }
+
+        #aboutus .prev,
+        .next {
+            padding: 16px;
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width:530px) {
+        #aboutus .dot {
+            height: 4px;
+            width: 30px;
+        }
+
+        #aboutus .prev,
+        .next {
+            padding: 10px;
+            font-size: 15px;
+        }
+        #aboutus .container {
+        width: 90%;
+        
+    }
+    }
+
+    @media only screen and (max-width:300px) {
+        #aboutus .content {
+            color: rgb(105, 105, 105);
+            font-weight: 100;
+            width: 100%;
+            padding: 0px;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+        #aboutus .sli {
+            width: 100%;
+        }
+        #aboutus .container {
+        width: 90%;
+        
+    }
+    }
+
+    #team .container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-height: auto;
+        background: rgb(10, 10, 10);
+        padding-top: 7%;
+        padding-bottom: 7%;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+
+    }
+
+    #team img {
+        width: 250px;
+        height: 250px;
+
+    }
+
+    #team .line {
+        border: 2px whitesmoke solid;
+        width: 50px;
+        background-color: whitesmoke;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #team .row {
+        max-width: 1300px;
+    }
+
+    #team .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 20px 0px 20px;
+    }
+
+    #team .card {
+        background-color: #222222;
+  
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin: 20px;
+        box-shadow: -2px -2px 1px #0cb2ff, -2px -2px 5px #a826ff, -2px -2px 5px  rgba(40, 54, 255, 0.952);
+        max-width: 250px;
+        transition: transform .2s;
+        /* Animation */
+
+    }
+
+    #team .picture {
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        overflow: hidden;
+        transition: transform .2s;
+        /* Animation */
+    }
+
+    #team .name {
+        font-size: 24px;
+        padding-top: 23px;
+      
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: capitalize;
+    }
+
+    #team .content {
+        text-align: center;
+    }
+
+    #team .dis {
+        margin: 0 0 5px 0;
+        color: #353535;
+        font-size: 12px;
+        padding: 10px;
+      
+        color: #353535;
+        padding-top: 9px;
+        color: #353535;
+    }
+
+    #team .work {
+       
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        padding-top: 9px;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    #team h1 {
+        text-align: center;
+        font-size: 40px;
+     
+        text-transform: capitalize;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        font-family: 'Monoton', cursive;
+        letter-spacing: 2px;
+        padding: 40px 39px 30px;
+    }
+
+    #team .description {
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 80%;
+    }
+
+    #team .fa {
+        color: rgb(202, 202, 202);
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+        padding: 5px;
+        margin: 6px;
+    }
+
+    #team .card {
+        position: relative;
+        cursor: pointer;
+    }
+
+    #team .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+    }
+
+    #team .card:hover .overlay {
+        bottom: 0;
+        width: 20%;
+
+    }
+
+    #team .card:hover {
+        transform: scale(1.05);
+    }
+
+    /* #team .picture:hover{
+        transform: scale(1.05);
+    } */
+
+    #team .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    #team .disp {
+        color: whitesmoke;
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    @media only screen and (max-width:1284px) {
+        #team img {
+            width: 240px;
+            height: 240px;
+        }
+
+        #team .card {
+            max-width: 240px;
+        }
+
+    }
+
+    @media only screen and (max-width:1165px) {
+        #team img {
+            width: 350px;
+            height: 350px;
+        }
+
+        #team .card {
+            max-width: 350px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 25px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px;
+        }
+    }
+
+    @media only screen and (max-width:784px) {
+        #team img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #team .card {
+            max-width: 250px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 20px;
+            width: 40px;
+            padding: 5px;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        #team img {
+            width: 300px;
+            height: 300px;
+        }
+
+        #team .card {
+            max-width: 300px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 20px;
+            width: 40px;
+            padding: 7px;
+        }
+    }
+
+    @media only screen and (max-width:360px) {
+        #team img {
+            width: 220px;
+            height: 220px;
+        }
+
+        #team .card {
+            max-width: 300px;
+            margin: 20px 0px 20px 0px;
+        }
+
+        #team .fa {
+            font-size: 15px;
+            width: 30px;
+        }
+    }
+
+    #footer BODY {
+        min-height: 100vh;
+        background-color: rgb(80, 78, 78);
+    }
+    #footer .container {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+    }
+
+    #footer .row {
+        max-width: 1500px;
+
+    }
+
+    #footer .cards {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding-bottom: 40px;
+    }
+
+    #footer .card1 {
+        background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 407px;
+        height: auto;
+        padding: 10px;
+    }
+
+    #footer .card2 {
+        background-color: #222222;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 407px;
+        height: auto;
+        padding: 10px;
+    }
+
+    #footer .name {
+        font-size: 40px;
+        margin-bottom: 32px;
+       
+        font-weight: bold;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        text-transform: capitalize;
+        font-family: 'Monoton', cursive;
+    }
+
+    #footer .content1 {
+        padding-top: 114px;
+
+    }
+
+    #footer .content {
+        padding-top: 40px;
+
+    }
+
+    #footer .work {
+
+        color: #e0dddd;
+        font-size: 16px;
+        padding-top: 6px;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    #footer h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        color: rgb(10, 6, 3);
+        letter-spacing: 2px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    #footer .description {
+        margin: auto;
+
+        text-align: left;
+        margin-top: 80%;
+    }
+
+    #footer .address {
+        color: white;
+     
+        margin-bottom: 20px;
+    }
+
+    #footer .con {
+        color: rgb(143, 142, 142);
+     
+
+    }
+
+    #footer .fa {
+        padding: 4px;
+        font-size: 25px;
+        width: 35px;
+        margin-right: 10px;
+        text-align: center;
+        text-decoration: none;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        background-color: rgb(85, 85, 85);
+        margin-top: 20px;
+    }
+
+    #footer .loco {
+        display: inline;
+        font-size: 14px;
+        color: white;
+    }
+
+    #footer .tele {
+        font-size: 14px;
+        color: white;
+
+    }
+
+    #footer .line {
+        border: 2px whitesmoke solid;
+        width: 50px;
+        background-color:whitesmoke;
+        margin-left: 0px;
+        
+        
+
+    }
+    #footer .address a{
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        font-family: 'Monoton', cursive;
+    }
+
+    @media only screen and (max-width:1230px) {
+        #footer .card1 {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        #footer .card2 {
+            width: 50%;
+            text-align: justify;
+            padding: 2vw 7vw 2vw;
+
+        }
+
+        #footer .content1 {
+            padding: 0px;
+        }
+
+        #footer .line {
+            margin: auto;
+            justify-content: center;
+        }
+
+        #footer .name {
+            font-size: 40px;
+            margin-bottom: 10px;
+
+        }
+
+    }
+
+    @media only screen and (max-width:873px) {
+        #footer .card1 {
+            width: 100%;
+            text-align: left;
+            padding: 2vw 7vw 2vw;
+
+        }
+
+        #footer .card2 {
+            width: 100%;
+            padding: 2vw 7vw 2vw;
+        }
+
+        #footer .line {
+            margin-left:0px  ;
+        }
+    }
+
+    .dealbig {
+
+        display: flex;
+
+    }
+
+    .dealbody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .dealcontainer {
+        width: 1300px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+
+    }
+
+    .dealcontainer .dealcard {
+        position: relative;
+        display: flex;
+        width: 40%;
+        height: auto;
+        padding: 40px; 
+        box-shadow: -10px 0px 10px -7px #0cb2ff, 10px 0px 10px -7px #a826ff, 5px 5px 12px 5px rgba(40, 54, 255, 0.952);
+        overflow: hidden;
+        border-radius: 20px 20px;
+        margin: 20px;
+
+    }
+
+    .dealline {
+        border: 2px rgb(255, 255, 255) solid;
+        width: 50px;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+        justify-content: center;
+    }
+
+    .dealcontainer .dealcard:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 4px);
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .dealcontainer .dealcard:nth-child(1)::before {
+        background-image: url("207-2073596_culture-event-poster-design.jpg");
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+    }
+
+    .dealcontainer .dealcard:nth-child(2)::before {
+        background-image: url("Ultra-Music-Festival86.jpg"); 
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;   }
+
+    .dealcontainer .dealcard:nth-child(3)::before {
+        background-image: url("dubai_business_events-.png");
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    }
+
+    .dealcontainer .dealcard:hover::before {
+        bottom: 0;
+        transform: scale(-.9);
+    }
+
+    .dealcontainer .dealcard div {
+        position: relative;
+        z-index: 1;
+    }
+
+    .dealcontainer .dealcard div h2 {
+        margin-bottom: 10px;
+        font-size: 30px;
+        transition: .5s;
+        color: rgb(255, 255, 255);
+        display: inline;
+        text-transform: capitalize;
+    }
+
+    .dealcontainer .dealcard div p {
+        margin-bottom: 18px;
+        transition: .5s;
+        text-align: left;
+        color: rgb(172, 171, 171);
+        margin-top: 10px;
+    }
+
+    .dealheading {
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+        margin-bottom: 30px;
+        background: linear-gradient(to right,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        font-family: 'Monoton', cursive;
+
+    }
+    
+    .dealcard:hover div h2,
+    .dealcard:hover div p {
+        color: transparent;
+    }
+
+
+    @media screen and (max-width:1000px) {
+        .dealcontainer {
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width:770px) {
+        .dealbig {
+
+            flex-direction: column;
+
+        }
+
+        .dealcontainer {
+            padding: 20px;
+        }
+
+        .dealcontainer .dealcard {
+            position: relative;
+            display: flex;
+            width: auto;
+        }
+
+        .dealcontainer .dealcard:hover::before {
+            bottom: 0;
+            transform: scale(-.93);
+        }
+    }
+
+    @media screen and (max-width:270px) {
+        .dealcontainer {
+            padding: 0px;
+        }
+    }
+    @media only screen and (max-width:369px) {
+        #footer .card1 {
+            padding: 2vw 2vw 2vw;
+        }
+        #footer .card2 {
+            padding: 2vw 2vw 2vw;
+        }
+        #services .heading h1 {
+    font-size: 30px;
+    color: black;
+}
+#aboutus .heading {
+    font-size: 35px;
+}
+.dealheading {
+    font-size: 30px;
+}
+#team h1 {
+    font-size: 35px;
+}
+#footer .name {
+    font-size: 35px;
+    }
+    .dealcontainer .dealcard div h2 {
+        
+        font-size: 30px;
+        
+    }
+    }
+    #centbutton .button {
+  text-align: center;
+  style="clear:both";
+  border: 2px solid rgb(32, 91, 255);
+  display: inline;
+  padding: 5px;
+  border-radius: 20px;
+ 
+}
+#centbutton a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+ 
+}
+#centbutton .button:nth-child(2) a {
+
+  color: whitesmoke;
+}
+#centbutton .button:nth-child(2) a:hover {
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+
+}
+
+#centbutton .button a:hover {
+  color: #ffffff;
+}
+/*glow for webkit*/
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 2px 2px 2px 1px #a826ff;
+  border-radius: 0px;
+  background: repeating-linear-gradient(45deg, #0f0f0f 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right top,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to left top,
+                    #b037f7, #b26eff, #2c6cf5,#43bef7); 
+            
+}
+
+
+
+</style>
+
+<body>
+    <!-- section of navigation bar -->
+    <section id=navigation>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa">&#xf039;</i>
+            </label>
+            <label class="glow">Simplo Events</label>
+            <label class="logo2">SE</label>
+            <ul>
+                <li><a href="" class="hidd">Simplo Events</a></li>
+                <li><a href="#sec1" class="active ho">Home</a></li>
+                <li><a href="#sec2" class="ho">Services</a></li>
+                <li><a href="#sec3" class="ho">About us</a></li>
+                <li><a href="#sec6" class="ho">Events</a></li>
+                <li><a href="#sec5" class="ho">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- section of navigation bar end -->
+    <div class="parallax" id="sec1">
+        <div class="set">
+
+            <div class="part1">
+                <h1 class="mid1"> Making Events
+                    <span class="txt-rotate" data-period="2000"
+                        data-rotate='[ "nerdy", "simple", "riveting", "exciting", "fun!" ]'></span>
+                </h1>
+                <h2 class="mid2"> <div id="centbutton">
+                    <div class="button"><a>
+                    <div class="button"><a style="font-family: 'Monoton', cursive";
+                        ,"pointer:cursor;">
+                        Just a  &lt;CLICK&gt; is all you need
+                    </a></div>   
+                </a></div>
+            </div></h2>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="box2" id="sec2">
+        <section id="services">
+            <div class="container">
+                <div class="heading">
+
+                    <h1>
+                        What We Offer
+                        <hr class="line">
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="card btn-1">
+                        <div class="classheader">
+
+                            <i class="fa fa-diamond" style="font-size:30px"></i>
+                            <h1>Management</h1>
+                        </div>
+                        <div class="icon"></div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-rocket" style="font-size:30px;"></i>
+                            <h1>Uniqueness</h1>
+                        </div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-cogs" style="font-size:30px"></i>
+                            <h1>Design</h1>
+                        </div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-pencil" style="font-size:30px"></i>
+                            <h1>Creativity</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-handshake-o" style="font-size:30px"></i>
+                            <h1>Strategy</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-edit" style="font-size:30px"></i>
+                            <h1>Marketing</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="box2" id="sec3">
+        <div id="aboutus">
+            <div class="container">
+                <div class="heading">
+                    about Us
+                    <hr class="line">
+                </div>
+                <div class="matter">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quasi maxime voluptatibus omnis. ,
+                        atque officiis possimus mollitia, nemo totam temporibus amet!
+                        <ul class="lol">
+
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+
+                        </ul>
+                    </div>
+                    <div class="sli">
+                        <div class="slideshow-container">
+
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+
+                            <a class="prev" onclick="newSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="newSlide(1)">&#10095;</a>
+
+                            <div class="dot-container">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="sec6">
+        <div class="dealbody">
+            <div class="dealcontainer">
+                <h1 class="dealheading">Events
+                    <hr class="dealline">
+                </h1>
+                <div class="dealbig">
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <h2>24 Dec</h2>
+                            <p>we provide absolutly free webpages with full customisation for new budding start up with
+                                free of cost maintainance and updates upto 1 year,also special off on our paid web
+                                pakages.
+                                <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <h2>1 Jan</h2>
+                            <p>our web package provide full web setup including logo designer with web development in
+                                disasterically low price only 10$ , with free maintainance upto 1 year and charge only
+                                when you want any updates </p>
+                            <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <h2>7 Jan</h2>
+                            <p>our web package provide full web setup including logo designer with web development in
+                                disasterically low price only 10$ , with free maintainance upto 1 year and charge only
+                                when u want any updates </p>
+                            <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box2" id="sec4">
+        <div id="team">
+            <div class="container">
+                <div class="row">
+                    <h1>OUR TEAM
+                        <hr class="line">
+                    </h1>
+                    <div class="disp">
+                        “Talent wins games, but teamwork and intelligence win championships.”  
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    sarthak
+                                </div>
+                                <div class="work">
+                                    web developer
+                                </div>
+
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    anukriti
+                                </div>
+                                <div class="work">
+                                    graphic designer
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-3.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    jayash
+                                </div>
+                                <div class="work">
+                                    content creater
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-4.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    barza
+                                </div>
+                                <div class="work">
+                                    web developer
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box2" id="sec5">
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="cards">
+                        <div class="card1">
+                            <div class="content">
+                                <div class="name">
+                                    Simplo Events
+                                    <hr class="line">
+                                    </h1>
+                                </div>
+                                <div class="work">
+                                    under srivas corporation.ptv
+                                </div>
+                                <div class="address">
+                                    <a href="#sec1">Home</a> | <a href="#sec2">Services</a> | <a href="#sec6">Events</a> | <a href="#sec3">About</a>
+                                        
+                                </div>
+                                <div class="con">
+                                    copyright law makes it possible for you to enforce
+                                    your rights, copyright law makes it possible for you to enforce
+                                    your rights
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="content1">
+                                <i class="fa fa-map-marker""></i>
+                            <div class=" loco">Head Office - Srivas Corporation <br>
+                                    309 - Rupa Solitaire,
+                                    Bldg. No. A - 1, Sector - 1
+                                    Mahape, Navi Mumbai - 400710
+                            </div>
+                            <div class="tele">
+                                <i class="fa fa-phone"></i>
+                                +91 22-27782183,+91 22-27782183
+                            </div>
+                            <div class="socials">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="content1">
+                            <i class="fa fa-map-marker""></i>
+                            <div class=" loco">Branch Office - Srivas Developer<br>
+                                309 - Rupa Solitaire,
+                                Bldg. No. A - 1, Sector - 1
+                                Mahape, Navi Mumbai - 400710
+                        </div>
+                    </div>
+                    <div class="tele">
+                        <i class="fa fa-phone"></i>
+                        +91 22-27782183,+91 22-27782183
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script>
+      var preloader = document.getElementById("loader");
+    function myfun(){
+        preloader.style.display ="none";
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+<script>
+    var slideNo = 1;
+    Carousel(slideNo);
+
+    function Carousel(n) {
+        var slides = document.getElementsByClassName("image-container");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideNo = 1;
+        }
+        if (n < 1) {
+            slideNo = slides.length;
+        }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideNo - 1].style.display = "block";
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[slideNo - 1].className += " active";
+
+    }
+    function newSlide(n) {
+        Carousel(slideNo += n);
+    }
+    function currentSlide(n) {
+        Carousel(slideNo = n);
+    }
+
+</script>
+
+</html>
